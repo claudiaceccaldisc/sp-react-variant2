@@ -1,0 +1,94 @@
+:root {
+  --bg: #f0f4f8;
+  --frame: #ffffff;
+  --primary: #4f46e5;
+  --primary-light: #e0e7ff;
+  --text: #1f2937;
+  --input-bg: #ffffff;
+  --input-border: #cbd5e1;
+  --button-bg: #4f46e5;
+  --button-hover: #4338ca;
+  --button-text: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: 1.75rem;
+  color: var(--primary);
+  text-align: center;
+}
+
+.app-container {
+  background-color: var(--frame);
+  border: 2px solid var(--primary-light);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 360px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group,
+.result-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label,
+.result-group label {
+  font-weight: 500;
+}
+
+.input-group input,
+.result-group input {
+  padding: 0.6rem;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  background-color: var(--input-bg);
+  font-size: 1rem;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+@media (min-width: 600px) {
+  .app-container {
+    max-width: 480px;
+    padding: 2.5rem;
+  }
+}
