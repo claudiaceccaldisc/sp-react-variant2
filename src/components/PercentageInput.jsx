@@ -6,6 +6,7 @@ export default function PercentageInput({ value, onChange }) {
       <label>Pourcentage (%) :</label>
       <input
         type="number"
+        step="any"
         value={value}
         onChange={onChange}
       />

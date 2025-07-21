@@ -6,6 +6,7 @@ export default function BaseInput({ value, onChange }) {
       <label>Valeur de base :</label>
       <input
         type="number"
+        step="any"
         value={value}
         onChange={onChange}
       />
