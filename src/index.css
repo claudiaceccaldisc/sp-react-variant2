@@ -1,7 +1,7 @@
 :root {
   --bg-light: #f0f4f8;
   --frame-light: #ffffff;
-  --text-light: #1f2937;
+  --text-light: #213547;
   --primary-light: #4f46e5;
   --accent-light: #e0e7ff;
   --input-bg-light: #ffffff;
@@ -10,70 +10,56 @@
   --button-hover-light: #4338ca;
   --button-text-light: #ffffff;
 
-  --bg-dark: #1a1a1a;
-  --frame-dark: #2a2a2a;
+  --bg-dark: #18181b;
+  --frame-dark: #252529;
   --text-dark: #e4e4e7;
-  --primary-dark: #6366f1;
+  --primary-dark: #818cf8;
   --accent-dark: #4f46e5;
-  --input-bg-dark: #3a3a3a;
-  --input-border-dark: #4b5563;
-  --button-bg-dark: #6366f1;
-  --button-hover-dark: #4f46e5;
+  --input-bg-dark: #3a3a3d;
+  --input-border-dark: #575758;
+  --button-bg-dark: #818cf8;
+  --button-hover-dark: #6366f1;
   --button-text-dark: #ffffff;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: var(--bg-light);
-    --frame: var(--frame-light);
-    --text: var(--text-light);
-    --primary: var(--primary-light);
-    --accent: var(--accent-light);
-    --input-bg: var(--input-bg-light);
-    --input-border: var(--input-border-light);
-    --button-bg: var(--button-bg-light);
-    --button-hover: var(--button-hover-light);
-    --button-text: var(--button-text-light);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: var(--bg-dark);
-    --frame: var(--frame-dark);
-    --text: var(--text-dark);
-    --primary: var(--primary-dark);
-    --accent: var(--accent-dark);
-    --input-bg: var(--input-bg-dark);
-    --input-border: var(--input-border-dark);
-    --button-bg: var(--button-bg-dark);
-    --button-hover: var(--button-hover-dark);
-    --button-text: var(--button-text-dark);
-  }
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
+  margin: 0;
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 1rem;
+  background-color: var(--bg-light);
 }
 
-h1 {
-  font-size: 2rem;
-  color: var(--primary);
-  text-align: center;
-  margin-bottom: 1rem;
+.app-container.light {
+  --bg: var(--bg-light);
+  --frame: var(--frame-light);
+  --text: var(--text-light);
+  --primary: var(--primary-light);
+  --accent: var(--accent-light);
+  --input-bg: var(--input-bg-light);
+  --input-border: var(--input-border-light);
+  --button-bg: var(--button-bg-light);
+  --button-hover: var(--button-hover-light);
+  --button-text: var(--button-text-light);
+}
+
+.app-container.dark {
+  --bg: var(--bg-dark);
+  --frame: var(--frame-dark);
+  --text: var(--text-dark);
+  --primary: var(--primary-dark);
+  --accent: var(--accent-dark);
+  --input-bg: var(--input-bg-dark);
+  --input-border: var(--input-border-dark);
+  --button-bg: var(--button-bg-dark);
+  --button-hover: var(--button-hover-dark);
+  --button-text: var(--button-text-dark);
+}
+
+body, .app-container {
+  background-color: var(--bg);
+  color: var(--text);
 }
