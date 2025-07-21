@@ -4,6 +4,22 @@
   margin: 0 auto;
   padding: 1rem;
 }
+.theme-toggle {
+  align-self: flex-end;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: 1px solid var(--button-text);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.theme-toggle:hover {
+  background-color: var(--button-hover);
+}
 
 .app-container {
   background-color: var(--frame);
