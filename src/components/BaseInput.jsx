@@ -4,9 +4,9 @@ export default function BaseInput({ value, onChange }) {
   return (
     <div className="input-group">
       <label>Valeur de base :</label>
-      <input
-        type="number"
-        step="any"
+       <input
+        type="text"
+        placeholder="Entrez un nombre"
         value={value}
         onChange={onChange}
       />
